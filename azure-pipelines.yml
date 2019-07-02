@@ -32,7 +32,7 @@ steps:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
-    vstsFeed: '/b94a834a-2f80-4216-96c8-88dfd1d0eaf1'
+    vstsFeed: '/jkrgames'
     includeNuGetOrg: false
   
 
