@@ -26,12 +26,14 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
-
-- task: PublishBuildArtifacts@1
+    
+- task: NuGetCommand@2
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: '/b94a834a-2f80-4216-96c8-88dfd1d0eaf1'
+    includeNuGetOrg: false
   
 
 
